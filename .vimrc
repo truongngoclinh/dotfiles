@@ -44,7 +44,11 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-" Optional:
+Plugin 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plugin 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+"Plugin 'othree/yajs.vim'
+"Plugin 'maksimr/vim-jsbeautify'
+" Option
 Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
@@ -79,6 +83,19 @@ let g:nerdtree_tabs_open_on_console_startup=1
 "close vim if only nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" jsbeautify
+".vimrc
+"map <c-f> :call JsBeautify()<cr>
+""or
+"autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+"for json
+"autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+""for jsx
+"autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+"for html
+"autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+""for css or scss
+"autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>"""""
 
 " pathogen
 execute pathogen#infect()
@@ -89,6 +106,20 @@ filetype plugin indent on
 " auto close brackets
 inoremap {<CR> {<CR>}<C-o>O
 inoremap (<CR> (<CR>)<C-o>O
+inoremap {{<CR> {{<CR>}}<C-o>O
+inoremap {(<CR> {(<CR>)}<C-o>O
+inoremap {{<Space> {{}}<Esc>hi
+inoremap {(<Space> {()}<Esc>hi
+inoremap ({<Space> ({})<Esc>hi
+"inoremap <<Space> <><Esc>i // react native only, python dont need
+inoremap <<CR> <<CR>/><C-o>O
+inoremap "<Space> ""<Esc>i
+inoremap ("<Tab> ("")<Esc>hi
+inoremap (<Space> ()<Esc>i
+inoremap {<Space> {}<Esc>i
+inoremap ([<CR> ([<CR>])<C-o>O
+inoremap <F3> gg=G
+" custom keymap
 
 " LEO STUFFS
 "Enable bash-like behavior when press tab in command mode
@@ -176,4 +207,12 @@ com! FormatJSON %!python -m json.tool
 "autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "autocmd FileType c set omnifunc=ccomplete#Complete
 
-
+"vim-jsx https://github.com/mxw/vim-jsx
+"let g:jsx_ext_required = 0
+"set t_Co=256
+"syntax on
+"set background=dark
+"colorscheme distinguished
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
