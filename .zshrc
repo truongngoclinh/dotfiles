@@ -13,7 +13,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
 
-#fortune | cowsay | lolcat
+fortune | cowsay | lolcat
  
 # disable ctrl-D closes terminal: http://unix.stackexchange.com/questions/139115/disable-ctrl-d-window-close-in-terminator-terminal-emulator
 set -o ignoreeof
