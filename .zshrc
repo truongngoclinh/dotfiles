@@ -3,6 +3,8 @@
  # ******************** boiboi preferences **********************
 # local: change 'ngoclinh.truong' to 'Truong' on PATH
 ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/Users/Truong/Library/Android/sdk/
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
