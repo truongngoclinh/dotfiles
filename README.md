@@ -1,2 +1,2 @@
 # dotfiles
-Configuration for my vim..
+Configuration for my vim...
