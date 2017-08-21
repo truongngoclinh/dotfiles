@@ -113,8 +113,8 @@ inoremap {(<Space> {()}<Esc>hi
 inoremap ({<Space> ({})<Esc>hi
 "inoremap <<Space> <><Esc>i // react native only, python dont need
 inoremap <<CR> <<CR>/><C-o>O
-inoremap "<Space> ""<Esc>i
-inoremap ("<Tab> ("")<Esc>hi
+"inoremap "<Space> ""<Esc>i // conflict with below syntax
+inoremap ("<Space> ("")<Esc>hi
 inoremap (<Space> ()<Esc>i
 inoremap {<Space> {}<Esc>i
 inoremap ([<CR> ([<CR>])<C-o>O

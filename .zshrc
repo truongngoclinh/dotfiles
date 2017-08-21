@@ -2,7 +2,9 @@
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
  # ******************** boiboi preferences **********************
 # local: change 'ngoclinh.truong' to 'Truong' on PATH
- ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
+ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/Users/Truong/Library/Android/sdk/
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
@@ -37,10 +39,12 @@ alias gcdo='git checkout origin/dev'
 alias gcb='git checkout -b'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
+alias gcH='git checkout HEAD --' #path of file to revert
 alias gcca='git checkout -- .'
 alias gcc='git checkout --' # discard change
-alias gch='git reset HEAD' # unstage file
-alias gcs='git reset --soft'
+alias gchh='git reset HEAD' # unstage file
+alias gch='git reset' # unstage file
+# alias gcs='git reset --soft'
 alias gcld='git clean -df'
 alias gr='git rebase'
 alias grm='git rebase master'
@@ -94,6 +98,7 @@ alias grsurl='git remote set-url'
 alias gsu='git submodule update'
 alias gsi='git submodule --init'
 alias gsui='git submodule update --init'
+alias gsuir='git submodule update --init --recursive'
  
 # commands
 alias lla='ls -la'
