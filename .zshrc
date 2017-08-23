@@ -146,6 +146,7 @@ alias github='cd ~/WSP/github'
 alias githubios='cd ~/WSP_IOS/github'
 alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
 alias cyberpay_transify='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
+alias scripts='cd /Users/Truong/Script'
 
 # config
 alias v='nvim'
