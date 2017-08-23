@@ -1,6 +1,6 @@
 # script for updating dotfiles to github
 now="$(date +%d/%m/%Y)"
-echo "\033[0;91m =>> Starting... \033[0m"
+echo "\033[0;31m =>> Starting... \033[0m"
 echo "\033[0;33m ==> Moving dotfiles to local repo \033[0m"
 
 # config files
@@ -28,4 +28,4 @@ git commit -m "update dotfiles, date: $now"
 echo "\033[0;33m ==> Pushing to github \033[0m"
 git push origin master
 
-echo "\033[0;91m ==> Finished! \033[0m"
+echo "\033[0;31m ==> Finished! \033[0m"
