@@ -157,6 +157,14 @@ alias cyberpay_transify='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/
 alias scripts='cd /Users/Truong/Script'
 alias appium='cd /Users/Truong/appium'
 
+# run scripts
+SCRIPT_PATH=/Users/Truong/Script
+alias stappium='sh $SCRIPT_PATH/start_appium_server.sh'
+alias stdotfiles='sh $SCRIPT_PATH/update_dotfiles.sh'
+alias stdaily='sh $SCRIPT_PATH/update_daily.sh'
+alias lang_ac_android='sh $SCRIPT_PATH/update_lang_ac_android.sh'
+alias lang_ac_ios='sh $SCRIPT_PATH/update_lang_ac_ios.sh'
+
 # config
 alias v='nvim'
 alias vi='nvim'
