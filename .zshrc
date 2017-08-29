@@ -10,10 +10,18 @@ export ANDROID_HOME=/Users/Truong/Library/Android/sdk/
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
-
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
 
-fortune | cowsay | lolcat
+#apache maven
+export M2_HOME=/Users/Truong/downloads/apache-maven-3.5.0
+export PATH=$PATH:$M2_HOME/bin
+
+#grunt
+export PATH=$PATH:/usr/local/share/npm/bin/
+export GRUNT_HOME=/usr/local/lib/node_modules/grunt/bin
+export PATH=$PATH:$GRUNT_HOME/
+
+#fortune | cowsay #| lolcat
  
 # disable ctrl-D closes terminal: http://unix.stackexchange.com/questions/139115/disable-ctrl-d-window-close-in-terminator-terminal-emulator
 set -o ignoreeof
@@ -147,6 +155,7 @@ alias githubios='cd ~/WSP_IOS/github'
 alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
 alias cyberpay_transify='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
 alias scripts='cd /Users/Truong/Script'
+alias appium='cd /Users/Truong/appium'
 
 # config
 alias v='nvim'
