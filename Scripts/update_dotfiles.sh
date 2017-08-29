@@ -25,8 +25,9 @@ echo "\033[0;33m ==> Adding files \033[0m"
 git add --all
 git status
 
-echo "\033[0;33m ==> Committing files \033[0m"
-git commit -m "update dotfiles, date: $nowDate - $nowDate"
+commitMsg="update dotfiles, date: $nowDate - $nowDate" 
+echo "\033[0;33m ==> Committing files with msg: \033[0m \033[32m $commitMsg \033[0m"
+git commit -m "$commitMsg"
 
 echo "\033[0;33m ==> Pushing to github \033[0m"
 git push origin master
