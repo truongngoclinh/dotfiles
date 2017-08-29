@@ -8,7 +8,7 @@ cp /Users/Truong/.vimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.zshrc /Users/Truong/WSP/github/dotfiles/
 
 # script files
-cp /Users/Truong/Script/update_dotfiles.sh /Users/Truong/WSP/github/dotfiles/Scripts/
+cp -r /Users/Truong/Script/* /Users/Truong/WSP/github/dotfiles/Scripts/
 
 cd /Users/Truong/WSP/github/dotfiles/
 

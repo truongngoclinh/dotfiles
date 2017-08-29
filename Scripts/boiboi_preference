@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "***************** HAVE A NICE DAY *****************"
+fortune | cowsay | lolcat
+
+# bindkey on zsh-auto-suggestion
+bindkey '^ ' autosuggest-accept
+echo "***************** END  *****************"
