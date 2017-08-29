@@ -25,7 +25,7 @@ echo "\033[0;33m ==> Adding files \033[0m"
 git add --all
 git status
 
-commitMsg="update dotfiles, date: $nowDate - $nowDate" 
+commitMsg="update dotfiles, date: $nowDate - $nowHours" 
 echo "\033[0;33m ==> Committing files with msg: \033[0m \033[32m $commitMsg \033[0m"
 git commit -m "$commitMsg"
 
