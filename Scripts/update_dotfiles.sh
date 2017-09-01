@@ -3,7 +3,7 @@
 nowDate="$(date +%d/%m/%Y)"
 nowHours="$(date +%T)"
 
-echo "\033[0;31m =>> Starting... \033[0m"
+echo "\033[0;32m ==> Starting... \033[0m"
 echo "\033[0;33m ==> Moving dotfiles to local repo \033[0m"
 
 # config files
@@ -32,4 +32,4 @@ git commit -m "$commitMsg"
 echo "\033[0;33m ==> Pushing to github \033[0m"
 git push origin master
 
-echo "\033[0;31m ==> Finished! \033[0m"
+echo "\033[0;32m ==> Finished! \033[0m"
