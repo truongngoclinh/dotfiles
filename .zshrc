@@ -1,4 +1,5 @@
 # If you come from bash you might have to change your $PATH.
+#
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
  # ******************** boiboi preferences **********************
 # local: change 'ngoclinh.truong' to 'Truong' on PATH
@@ -36,6 +37,9 @@ bindkey '^ ' autosuggest-accept
 alias gcl='git clone'
 alias gst='git status'
 alias gb='git branch'
+alias gbsut='git branch --set-upstream-to' # origin/branch_name
+alias gbvv='git branch -vv' # check tracked branch
+alias gbr='git branch -r'
 alias gba='git branch -a'
 alias gbm='git branch -m'
 alias gl='git log --pretty=oneline'
@@ -77,10 +81,13 @@ alias gpb='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gpfb='git push --force origin `git rev-parse --abbrev-ref HEAD`'
 alias gbn='git rev-parse --abbrev-ref HEAD'
 alias gpl='git pull'
-alias gplo='git pull origin master'
+alias gplo='git pull origin'
+alias gfo='git fetch origin'
+alias gmo='git merge origin'
+alias gplom='git pull origin master'
 alias gplH='git pull origin HEAD'
-alias gfo='git fetch origin master'
-alias gmo='git merge origin master'
+alias gfom='git fetch origin master'
+alias gmom='git merge origin master'
 alias gf='git fetch'
 alias gm='git merge'
 alias gmfo='git merge -s ours'
@@ -155,7 +162,10 @@ alias githubios='cd ~/WSP_IOS/github'
 alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
 alias cyberpay_transify='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
 alias scripts='cd /Users/Truong/Script'
+
+#appium
 alias appium='cd /Users/Truong/appium'
+alias surefire='cd /Users/Truong/WSP_IOS/appium_automationTest/airpay_counter_ios_automation/target/surefire-reports'
 
 # run scripts
 SCRIPT_PATH=/Users/Truong/Script
@@ -164,11 +174,14 @@ alias stdotfiles='sh $SCRIPT_PATH/update_dotfiles.sh'
 alias stdaily='sh $SCRIPT_PATH/update_daily.sh'
 alias lang_ac_android='sh $SCRIPT_PATH/update_lang_ac_android.sh'
 alias lang_ac_ios='sh $SCRIPT_PATH/update_lang_ac_ios.sh'
+alias vpn='sh $SCRIPT_PATH/vpn.sh'
+alias lang_ac_be='sh /Users/Truong/WSP_BE/cyberpay_service_mobile/scripts/langs.sh'
 
 # config
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias py='python'
 
 alias vdiff='vim -d' # E.g. vimdiff file1.java file2.java
 alias vconf='vi ~/.config/nvim/init.vim'
