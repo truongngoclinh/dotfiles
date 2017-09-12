@@ -219,4 +219,4 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 "Crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
-set backupcopy=yes
+"set backupcopy=yes
