@@ -120,6 +120,10 @@ inoremap {<Space> {}<Esc>i
 inoremap ([<CR> ([<CR>])<C-o>O
 inoremap <F3> gg=G
 " custom keymap
+"
+" vim copy
+vmap <C-x> :!pbcopy<CR>  
+vmap <C-c> :w !pbcopy<CR><CR> 
 
 " LEO STUFFS
 "Enable bash-like behavior when press tab in command mode

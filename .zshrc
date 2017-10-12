@@ -69,6 +69,7 @@ alias grc='git rebase --continue'
 alias gcom='git commit -m'
 alias gcoa='git commit -a'
 alias gaa='git add --all'
+#alias grm='git rm'
 alias ga.='git add .'
 alias ga='git add'
 alias gaj='git add \*.java'
@@ -113,6 +114,7 @@ alias gi='git init'
 alias grao='git remote add origin'
 alias grv='git remote -v'
 alias grsurl='git remote set-url'
+alias gsabm='git submodule add -b master' #[URL to Git repo]
 alias gsu='git submodule update'
 alias gsi='git submodule --init'
 alias gsui='git submodule update --init'
@@ -165,6 +167,7 @@ alias githubios='cd ~/WSP_IOS/github'
 alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
 alias cyberpay_transify='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
 alias scripts='cd /Users/Truong/Script'
+alias gfw='cd /Users/Truong/WSP_IOS/appium_automationTest/GAutomationFW'
 
 #appium
 alias appium='cd /Users/Truong/appium'
@@ -179,6 +182,10 @@ alias lang_ac_android='sh $SCRIPT_PATH/update_lang_ac_android.sh'
 alias lang_ac_ios='sh $SCRIPT_PATH/update_lang_ac_ios.sh'
 alias vpn='sh $SCRIPT_PATH/vpn.sh'
 alias lang_ac_be='cd /Users/Truong/WSP_BE/cyberpay_service_mobile/scripts/; rake lang'
+
+# automation fw
+alias sttc='sh $SCRIPT_PATH/gw_tc_start.sh' # start test case
+alias stbtc='sh $SCRIPT_PATH/gw_tc_build_and_start.sh' # build and start test case
 
 # config
 alias v='nvim'
