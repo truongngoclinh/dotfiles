@@ -14,6 +14,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
 
 #apache maven
+#export M2_HOME=/Users/Truong/downloads/apache-maven-3.1.1
 export M2_HOME=/Users/Truong/downloads/apache-maven-3.5.0
 export PATH=$PATH:$M2_HOME/bin
 
