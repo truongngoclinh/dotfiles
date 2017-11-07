@@ -78,7 +78,8 @@ alias gax='git add \*.xml'
 alias gag='git add \*.gradle'
 alias gp='git push origin'
 alias gpo='git push origin master'
-alias gpuo='git push -u origin master'
+alias gpuo='git push -u origin'
+alias gpuom='git push -u origin master'
 alias gpf='git push --force origin'
 alias gpb='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gpfb='git push --force origin `git rev-parse --abbrev-ref HEAD`'
@@ -146,6 +147,7 @@ alias -s c=vim
 alias -s cpp=vim
  
 # specific location
+alias book='cd /Users/Truong/documents/Books'
 alias smw='cd ~/SMW'
 alias wsp='cd ~/WSP'
 alias wspbe='cd ~/WSP_BE'
@@ -172,7 +174,7 @@ alias scripts='cd /Users/Truong/Script'
 alias gfw='cd /Users/Truong/WSP_IOS/appium_automationTest/GAutomationFW'
 
 #appium
-alias appium='cd /Users/Truong/appium'
+alias appiumDir='cd /Users/Truong/appium'
 alias surefire='cd /Users/Truong/WSP_IOS/appium_automationTest/airpay_counter_ios_automation/target/surefire-reports'
 
 # run scripts
