@@ -1,1 +1,1 @@
-mvn clean test
+mvn clean test -Dtest=garena.clients.apc.TestExecution

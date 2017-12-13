@@ -2,4 +2,4 @@ cd '/Users/Truong/WSP_IOS/appium_automationTest/GAutomationFW/scripts'
 rake gen\[android\]
 rake gen\[ios\]
 cd ..
-mvn clean test
+mvn clean test -Dtest=garena.clients.apc.TestExecution
