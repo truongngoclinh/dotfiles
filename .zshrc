@@ -1,15 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 #
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
- # ******************** boiboi preferences **********************
+# ******************** boiboi preferences **********************
 # local: change 'ngoclinh.truong' to 'Truong' on PATH
 ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
 
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/Users/Truong/Library/Android/sdk/
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/build-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
 
@@ -43,7 +46,9 @@ alias gbvv='git branch -vv' # check tracked branch
 alias gbr='git branch -r'
 alias gba='git branch -a'
 alias gbm='git branch -m'
-alias gl='git log --pretty=oneline'
+alias gl1='git log --pretty=oneline'
+alias gl='git log --all --decorate --oneline --graph'
+alias glo='git log'
 alias grl='git reflog'
 alias gc='git checkout'
 alias gcm='git checkout master'
@@ -127,9 +132,7 @@ alias gsuir='git submodule update --init --recursive'
 alias lla='ls -la'
 alias lsa='ls -a'
 alias rmr='rm -r'
-alias download='cd ~/Downloads'
-alias desktop='cd ~/Desktop'
- 
+
 # application
 alias skype='sudo /Applications/Skype.app/Contents/MacOS/Skype' # bad, alway open new instance
 alias -s txt=vim
@@ -147,29 +150,37 @@ alias -s c=vim
 alias -s cpp=vim
  
 # specific location
+alias download='cd ~/Downloads'
+alias desktop='cd ~/Desktop'
+alias user='cd ~'
+alias sshcf='cd ~/.ssh'
 alias book='cd /Users/Truong/documents/Books'
 alias smw='cd ~/SMW'
 alias wsp='cd ~/WSP'
 alias wspbe='cd ~/WSP_BE'
+alias wspfe='cd ~/WSP_FE'
 alias wspios='cd ~/WSP_IOS'
 alias wspothers='cd ~/WSP_OTHERS'
 alias wspjs='cd ~/WSP_JS'
 alias wspsp='cd ~/WSP/sp'
 alias nvkd='cd ~/WSP/GARENA/NVKD_android'
+alias vpay_admin='cd ~/WSP_BE/vpay/web/vpay_admin'
 alias gas='cd ~/WSP/gas-v2'
 alias gas1='cd ~/WSP/garena-plus'
 alias streaming_android='cd ~/WSP/GARENA/VED_Gaming'
 alias streaming_ios='cd ~/WSP/GARENA/IOS_streaming_library'
 alias toppay='cd ~/WSP/GARENA/TopPay_android/beepay'
 alias toppay_protocol='cd ~/WSP/GARENA/Toppay_protocol'
-alias cyberpay='cd ~/WSP/GARENA/SG/cyberpay-admin-app'
-alias cyberpayios='cd ~/WSP_IOS/cyberpay'
-alias cyberpayservice='cd ~/WSP_BE/cyberpay_service_mobile'
+alias cbp='cd ~/WSP/GARENA/SG/cyberpay-admin-app'
+alias cbpios='cd ~/WSP_IOS/cyberpay'
+alias cbpservice='cd ~/WSP_BE/cyberpay_service_mobile'
+alias cbpfeservice='cd ~/WSP_BE/cyberpay_webclient_backend'
+alias cbpfeseller='cd ~/WSP_FE/cyberpay_webclient_frontend'
 alias gasios='cd ~/WSP_IOS/gas-ios'
 alias github='cd ~/WSP/github'
 alias githubios='cd ~/WSP_IOS/github'
 alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
-alias cyberpay_transify='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
+alias cbptrans='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
 alias scripts='cd /Users/Truong/Script'
 alias gfw='cd /Users/Truong/WSP_IOS/appium_automationTest/GAutomationFW'
 
@@ -198,17 +209,17 @@ alias vim='nvim'
 alias py='python'
 
 alias vdiff='vim -d' # E.g. vimdiff file1.java file2.java
-alias vconf='vi ~/.config/nvim/init.vim'
+alias vcf='vi ~/.config/nvim/init.vim'
 alias vimdiff='vim -d' # E.g. vimdiff file1.java file2.java
 alias vimconf='vi ~/.config/nvim/init.vim'
  
-alias hconfig='sudo vim /etc/hosts'
+alias hcf='sudo vim /etc/hosts'
 alias vdir='cd ~/.vim/bundle'
-alias vconfig='vim ~/.vimrc'
-alias zconfig='vim ~/.zshrc'
-alias bconfig='vim ~/.bash_profile'
-alias zupdate='source ~/.zshrc'
-alias bupdate='source ~/.bash_profile'
+alias vcf='vim ~/.vimrc'
+alias zcf='vim ~/.zshrc'
+alias bcf='vim ~/.bash_profile'
+alias zud='source ~/.zshrc'
+alias bud='source ~/.bash_profile'
 
 alias rn='react-native'
 alias rni='react-native init'
