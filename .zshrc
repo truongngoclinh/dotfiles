@@ -26,7 +26,7 @@ export PATH=$PATH:/usr/local/share/npm/bin/
 export GRUNT_HOME=/usr/local/lib/node_modules/grunt/bin
 export PATH=$PATH:$GRUNT_HOME/
 
-#fortune | cowsay #| lolcat
+#fortune | cowsay | # lolcat
  
 # disable ctrl-D closes terminal: http://unix.stackexchange.com/questions/139115/disable-ctrl-d-window-close-in-terminator-terminal-emulator
 set -o ignoreeof
@@ -38,6 +38,8 @@ plugins=(zsh-autosuggestions)
 bindkey '^ ' autosuggest-accept
  
 # git
+alias gtl='git describe --tags `git rev-list --tags --max-count=1`'
+alias gptvn='git push vn --tags'
 alias gcl='git clone'
 alias gst='git status'
 alias gb='git branch'
@@ -49,6 +51,8 @@ alias gbm='git branch -m'
 alias gl='git log --pretty=oneline'
 alias glt='git log --all --decorate --oneline --graph'
 alias glo='git log'
+alias glg='git lg'
+alias gll='git reflog -1 | sed `s/^.*: //`'
 alias grl='git reflog'
 alias gc='git checkout'
 alias gcm='git checkout master'
@@ -73,7 +77,7 @@ alias grs='git rebase --skip'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gcom='git commit -m'
-alias gcoa='git commit -a'
+alias gcoa='git commit --amend'
 alias gaa='git add --all'
 #alias grm='git rm'
 alias ga.='git add .'
@@ -87,12 +91,18 @@ alias gpuo='git push -u origin'
 alias gpuom='git push -u origin master'
 alias gpf='git push --force origin'
 alias gpb='git push origin `git rev-parse --abbrev-ref HEAD`'
+alias gpbvn='git push vn `git rev-parse --abbrev-ref HEAD`'
 alias gpfb='git push --force origin `git rev-parse --abbrev-ref HEAD`'
+alias gpfbvn='git push --force vn `git rev-parse --abbrev-ref HEAD`'
 alias gbn='git rev-parse --abbrev-ref HEAD'
 alias gpl='git pull'
+alias gplvn='git pull vn'
 alias gplo='git pull origin master'
 alias gplr='git pull --rebase'
+alias gplrvn='git pull vn --rebase'
 alias gplro='git pull --rebase origin master'
+alias gplrovni='git pull --rebase vn master_vn'
+alias gplrovna='git pull --rebase vn vn_release'
 alias gfo='git fetch origin'
 alias gmo='git merge origin'
 alias gplom='git pull origin master'
@@ -154,7 +164,7 @@ alias download='cd ~/Downloads'
 alias desktop='cd ~/Desktop'
 alias user='cd ~'
 alias sshcf='cd ~/.ssh'
-alias book='cd /Users/Truong/documents/Books'
+alias book='cd /Users/Truong/documents/github/Books/book-warehouse'
 alias smw='cd ~/SMW'
 alias wsp='cd ~/WSP'
 alias wspbe='cd ~/WSP_BE'
@@ -226,6 +236,9 @@ alias rni='react-native init'
 alias rnra='react-native run-android'
 alias rnri='react-native run-ios'
 alias rnh='react-native --help'
+
+# fastlane
+alias f='fastlane'
 
 # ******************* end *********************
  

@@ -16,6 +16,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:ycm_path_to_python_interpreter="/usr/bin/python"
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -144,7 +145,7 @@ set smartindent                         " smart indent
 set cursorline                          " hightlight current line
 set noerrorbells                        " No beeps.
 set modeline                            " Enable modeline.
-set esckeys                             " Cursor keys in insert mode.
+"set esckeys                             " Cursor keys in insert mode.
 set linespace=0                         " Set line-spacing to minimum.
 set nojoinspaces                        " Prevents inserting two spaces after punctuation on a join (J)
 set autoread                            " Auto refresh file content when there are external changes to the file
