@@ -15,6 +15,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
+export PATH=$PATH:/usr/local/mysql/bin
 
 #apache maven
 #export M2_HOME=/Users/Truong/downloads/apache-maven-3.1.1
@@ -51,7 +52,8 @@ alias gbm='git branch -m'
 alias gl='git log --pretty=oneline'
 alias glt='git log --all --decorate --oneline --graph'
 alias glo='git log'
-alias glg='git lg'
+alias glm='git lg'
+alias gls='git log --stat'
 alias gll='git reflog -1 | sed `s/^.*: //`'
 alias grl='git reflog'
 alias gc='git checkout'
@@ -214,7 +216,7 @@ alias stbtc='sh $SCRIPT_PATH/gw_tc_build_and_start.sh' # build and start test ca
 
 # config
 alias v='nvim'
-alias vi='nvim'
+#alias vi='nvim'
 alias vim='nvim'
 alias py='python'
 

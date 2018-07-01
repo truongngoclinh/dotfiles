@@ -1,6 +1,21 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"map
+:map K dwelp
+:map e ea
+":map V lbi<B>^[e</B>^[
+":map g I/* "^["A */"^["
+:map! % ^[kA:^[jA
+
+"abbr
+ab pr private
+ab pu public
+ab prsf private static final
+
+"vim 7th edition 
+set nowrapscan
+
 "tern
 "enable keyboard shortcuts
 let g:tern_map_keys=1
@@ -69,7 +84,7 @@ filetype plugin indent on    " required
 
 " NERD tree
 map <C-t> :NERDTreeTabsToggle<CR>
-map <C-f> :NERDTreeFind<CR>
+"map <C-f> :NERDTreeFind<CR>
 
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
@@ -139,7 +154,7 @@ set ruler                               " Show the line and column numbers of th
 "set textwidth=100                       " Hard-wrap long lines as you type them.
 set number                              " Show the line numbers on the left side.
 set formatoptions+=o                    " Continue comment marker in new lines.
-set number                              " show line number
+""set number                              " show line number
 set autoindent                          " turn auto indent on
 set smartindent                         " smart indent
 set cursorline                          " hightlight current line
@@ -184,6 +199,7 @@ set smartcase                            " ... unless the query has capital lett
 set incsearch                            " Incremental search.
 set gdefault                             " Use 'g' flag by default with :s/foo/bar/.
 set magic                                " Use 'magic' patterns (extended regular expressions).
+set autowrite
 set hlsearch                             " Highlight search results.
 " Use <C-L> to toggle hlsearch.
 let hlstate=0
