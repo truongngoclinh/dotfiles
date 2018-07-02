@@ -2,11 +2,12 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 "map
-:map K dwelp
-:map e ea
+":map K dwelp
+":map e ea
 ":map V lbi<B>^[e</B>^[
 ":map g I/* "^["A */"^["
-:map! % ^[kA:^[jA
+":map! % ^[kA:^[jA
+:map <C-S> :nohlsearch <CR>
 
 "abbr
 ab pr private
@@ -195,6 +196,7 @@ endif
 set list                                 " Show problematic characters.
 "Search stuff
 set ignorecase                           " Make searching case insensitive
+set ic
 set smartcase                            " ... unless the query has capital letters.
 set incsearch                            " Incremental search.
 set gdefault                             " Use 'g' flag by default with :s/foo/bar/.
