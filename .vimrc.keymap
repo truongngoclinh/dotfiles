@@ -1,0 +1,27 @@
+" i
+inoremap jf <Esc>
+inoremap <c-h> <Left>
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-l> <Right>
+inoremap <c-o> <Esc>o
+
+" n
+nnoremap j gj
+nnoremap k gk
+nnoremap L $
+nnoremap H ^
+nnoremap Y y$
+nnoremap <c-l> L
+nnoremap <c-h> H
+nnoremap <c-m> M
+nnoremap <cr> o<esc>
+nnoremap <c-j> :m+1<cr>
+nnoremap <c-k> :m-2<cr>
+
+" v
+vnoremap L $
+vnoremap H ^
+vnoremap jk <Esc>
+vnoremap jf <Esc>
+

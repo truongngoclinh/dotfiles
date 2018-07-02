@@ -1,5 +1,9 @@
+source ~/.vimrc.keymap
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+imap jk <Esc>
 
 "map
 ":map K dwelp
@@ -209,7 +213,9 @@ nnoremap <silent> <c-l> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsear
 "Mouse support
 set mouse=a
 "Copy and paste
-set clipboard=unnamed  " use the clipboards of vim and win
+"set clipboard=unnamed  " use the clipboards of vim and win
+set clipboard+=unnamed
+
 "Setup colorscheme
 "colorscheme molokai
 "Make backspace works

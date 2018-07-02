@@ -1,0 +1,70 @@
+source ~/.vimrc.keymap
+let mapleader = ' '
+
+set ignorecase
+set incsearch
+set hlsearch
+set smartcase
+set surround
+set visualbell
+set noerrorbells
+set clipboard+=unnamed
+set scrolloff=5 sidescrolloff=10 
+set number 
+
+"n
+nnoremap ma :action SearchEverywhere<cr>
+"nnoremap mr :action Refactorings.QuickListPopupAction<cr>
+nnoremap mr :action RenameElement<cr>
+nnoremap mf :action FindInPath<cr>
+nnoremap ms :action FileStructurePopup<cr>
+nnoremap mp :action PasteMultiple<cr>
+nnoremap mj :action QuickJavaDoc<cr>
+nnoremap mg :action Generate<cr>
+nnoremap mo :action OptimizeImports<cr>
+nnoremap me :action ExtractMethod<cr>
+nnoremap md :action ToggleDistractionFreeMode<cr>
+nnoremap mp :action TogglePresentationMode<cr>
+
+nnoremap gu :action ShowUsages<cr>
+nnoremap gh :action Back<cr>
+nnoremap ga :action GotoAction<cr>
+nnoremap gl :action Forward<cr>
+nnoremap gd :action GotoDeclaration<cr>
+nnoremap gs :action GotoSuperMethod<cr>
+nnoremap gi :action GotoImplementation<cr>
+nnoremap gb :action JumpToLastChange<cr>
+nnoremap gt :action InsertLiveTemplate<cr>
+nnoremap gr :action RecentFiles<cr>
+
+nnoremap == :action ReformatCode<cr>
+nnoremap cc :action CommentByLineComment<cr>
+nnoremap <c-cr> :action ShowIntentionActions<cr>
+
+nmap zi :action EditorIncreaseFontSize<CR>
+nmap zo :action EditorDecreaseFontSize<CR>
+
+"nmap <space>v :action IntroduceVariable<CR>
+"nmap <space>i :action Inline<CR>
+"
+" Cursive
+nnoremap <leader>W :action :cursive.actions.paredit/wrap-paren<cr>
+nnoremap <leader>w[ :action :cursive.actions.paredit/wrap-square<cr>
+nnoremap <leader>w{ :action :cursive.actions.paredit/wrap-curly<cr>
+nnoremap <leader>w" :action :cursive.actions.paredit/wrap-quotes<cr>
+nnoremap <leader>< :action :cursive.actions.paredit/barf-forwards<cr>
+nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr>
+
+"v
+vnoremap me :action ExtractMethod<cr>
+vnoremap == :action ReformatCode<cr>
+vnoremap cc :action CommentByLineComment<cr>
+
+"i
+inoremap <C-n> <C-o>:action InsertLiveTemplate<CR>
+
+"abbr
+"iab pr private
+"iab pu public
+"iab prsf private static final
+
