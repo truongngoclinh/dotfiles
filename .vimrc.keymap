@@ -1,9 +1,14 @@
 " i
 inoremap jf <Esc>
-inoremap <c-h> <Left>
+
+" behavior
+inoremap <c-h> <bs>
+
 inoremap <c-j> <Down>
 inoremap <c-k> <Up>
 inoremap <c-l> <Right>
+inoremap <c-y> <Left>
+
 inoremap <c-o> <Esc>o
 
 " n
@@ -12,18 +17,22 @@ nnoremap k gk
 nnoremap L $
 nnoremap H ^
 nnoremap Y y$
+nnoremap B c^
+nnoremap W c$
+nnoremap E yyp
 nnoremap <c-l> L
 nnoremap <c-h> H
 nnoremap <c-m> M
 nnoremap <cr> o<esc>
 nnoremap <c-j> :m+1<cr>
 nnoremap <c-k> :m-2<cr>
+nnoremap e ea
 
 "
-nmap S i<CR><ESC>^m`gk:s/ +$//<CR>``
+"nmap S i<CR><ESC>^m`gk:s/ +$//<CR>``
 
 " Whitespace removal
-nmap :w<CR> :%s/^\s+$//g<CR>:w<CR>:echo "Written and trimmed whitespace"<CR>
+"nmap :w<CR> :%s/^\s+$//g<CR>:w<CR>:echo "Written and trimmed whitespace"<CR>
 
 " v
 vnoremap L $

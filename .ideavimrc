@@ -3,29 +3,30 @@ let mapleader = ' '
 
 set ignorecase
 set incsearch
-set hlsearch
+"set hlsearch
 set smartcase
 set surround
 set visualbell
 set noerrorbells
 set clipboard+=unnamed
 set scrolloff=5 sidescrolloff=10 
-set number 
+"set number 
 
 "n
 nnoremap ma :action SearchEverywhere<cr>
 "nnoremap mr :action Refactorings.QuickListPopupAction<cr>
 nnoremap mr :action RenameElement<cr>
 nnoremap mf :action FindInPath<cr>
-nnoremap ms :action FileStructurePopup<cr>
-nnoremap mp :action PasteMultiple<cr>
+nnoremap mv :action PasteMultiple<cr>
 nnoremap mj :action QuickJavaDoc<cr>
 nnoremap mg :action Generate<cr>
 nnoremap mo :action OptimizeImports<cr>
 nnoremap me :action ExtractMethod<cr>
 nnoremap md :action ToggleDistractionFreeMode<cr>
 nnoremap mp :action TogglePresentationMode<cr>
+nnoremap mt :action InsertLiveTemplate<cr>
 
+nnoremap go :action FileStructurePopup<cr>
 nnoremap gu :action ShowUsages<cr>
 nnoremap gh :action Back<cr>
 nnoremap ga :action GotoAction<cr>
@@ -34,18 +35,20 @@ nnoremap gd :action GotoDeclaration<cr>
 nnoremap gs :action GotoSuperMethod<cr>
 nnoremap gi :action GotoImplementation<cr>
 nnoremap gb :action JumpToLastChange<cr>
-nnoremap gt :action InsertLiveTemplate<cr>
 nnoremap gr :action RecentFiles<cr>
+nnoremap gt :action GotoClass<cr>
+nnoremap gf :action GotoFile<cr>
+
+nnoremap cc :action CommentByLineComment<cr>
 
 nnoremap == :action ReformatCode<cr>
-nnoremap cc :action CommentByLineComment<cr>
 nnoremap <c-cr> :action ShowIntentionActions<cr>
 
-nmap zi :action EditorIncreaseFontSize<CR>
-nmap zo :action EditorDecreaseFontSize<CR>
+nmap zi :action EditorIncreaseFontSize<cr>
+nmap zo :action EditorDecreaseFontSize<cr>
 
-"nmap <space>v :action IntroduceVariable<CR>
-"nmap <space>i :action Inline<CR>
+"nmap <space>v :action IntroduceVariable<cr>
+"nmap <space>i :action Inline<cr>
 "
 " Cursive
 nnoremap <leader>W :action :cursive.actions.paredit/wrap-paren<cr>
@@ -58,10 +61,12 @@ nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr>
 "v
 vnoremap me :action ExtractMethod<cr>
 vnoremap == :action ReformatCode<cr>
+vnoremap ga :action GotoAction<cr>
 vnoremap cc :action CommentByLineComment<cr>
+vnoremap <c-cr> :action ShowIntentionActions<cr>
 
 "i
-inoremap <C-n> <C-o>:action InsertLiveTemplate<CR>
+inoremap <C-n> <C-o>:action InsertLiveTemplate<cr>
 
 "abbr
 "iab pr private
