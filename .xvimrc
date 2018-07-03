@@ -1,0 +1,7 @@
+set ignorecase
+set smartcase
+set hlsearch
+
+nmap gcc :xccmd commentAndUncommentCurrentLines<CR>
+vmap gc :xccmd commentAndUncommentCurrentLines<CR>
+

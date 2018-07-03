@@ -10,6 +10,7 @@ echo "\033[0;33m ==> Moving dotfiles to local repo \033[0m"
 cp /Users/Truong/.vimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.zshrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.ideavimrc /Users/Truong/WSP/github/dotfiles/
+cp /Users/Truong/.xvimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.vimrc.keymap /Users/Truong/WSP/github/dotfiles/
 cp -rf /Users/Truong/.emacs.d /Users/Truong/WSP/github/dotfiles/
 
