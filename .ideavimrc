@@ -59,6 +59,7 @@ nnoremap <leader>< :action :cursive.actions.paredit/barf-forwards<cr>
 nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr>
 
 "v
+vnoremap mf :action FindInPath<cr>
 vnoremap me :action ExtractMethod<cr>
 vnoremap == :action ReformatCode<cr>
 vnoremap ga :action GotoAction<cr>
