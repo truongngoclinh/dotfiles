@@ -140,6 +140,9 @@ inoremap (<Space> ()<Esc>i
 inoremap {<Space> {}<Esc>i
 inoremap ([<CR> ([<CR>])<C-o>O
 inoremap <F3> gg=G
+nnoremap == gg=G
+vnoremap == gg=G
+inoremap == gg=G
 " custom keymap
 "
 " vim copy

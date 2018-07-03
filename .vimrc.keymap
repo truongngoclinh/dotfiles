@@ -19,6 +19,12 @@ nnoremap <cr> o<esc>
 nnoremap <c-j> :m+1<cr>
 nnoremap <c-k> :m-2<cr>
 
+"
+nmap S i<CR><ESC>^m`gk:s/ +$//<CR>``
+
+" Whitespace removal
+nmap :w<CR> :%s/^\s+$//g<CR>:w<CR>:echo "Written and trimmed whitespace"<CR>
+
 " v
 vnoremap L $
 vnoremap H ^
