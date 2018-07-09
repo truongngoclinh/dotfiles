@@ -38,6 +38,7 @@ nnoremap gb :action JumpToLastChange<cr>
 nnoremap gr :action RecentFiles<cr>
 nnoremap gt :action GotoClass<cr>
 nnoremap gf :action GotoFile<cr>
+nnoremap gn :action SelectIn<cr>
 
 nnoremap cc :action CommentByLineComment<cr>
 
@@ -51,16 +52,18 @@ nmap zo :action EditorDecreaseFontSize<cr>
 "nmap <space>i :action Inline<cr>
 "
 " Cursive
-nnoremap <leader>W :action :cursive.actions.paredit/wrap-paren<cr>
-nnoremap <leader>w[ :action :cursive.actions.paredit/wrap-square<cr>
-nnoremap <leader>w{ :action :cursive.actions.paredit/wrap-curly<cr>
-nnoremap <leader>w" :action :cursive.actions.paredit/wrap-quotes<cr>
-nnoremap <leader>< :action :cursive.actions.paredit/barf-forwards<cr>
-nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr>
+" nnoremap <leader>W :action :cursive.actions.paredit/wrap-paren<cr>
+" nnoremap <leader>w[ :action :cursive.actions.paredit/wrap-square<cr>
+" nnoremap <leader>w{ :action :cursive.actions.paredit/wrap-curly<cr>
+" nnoremap <leader>w" :action :cursive.actions.paredit/wrap-quotes<cr>
+" nnoremap <leader>< :action :cursive.actions.paredit/barf-forwards<cr>
+" nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr>
+" n
 
 "v
 vnoremap mf :action FindInPath<cr>
 vnoremap me :action ExtractMethod<cr>
+vnoremap ma :action SearchEverywhere<cr>
 vnoremap == :action ReformatCode<cr>
 vnoremap ga :action GotoAction<cr>
 vnoremap cc :action CommentByLineComment<cr>

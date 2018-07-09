@@ -1,6 +1,8 @@
 source ~/.vimrc.keymap
 
-set nocompatible              " be iMproved, required
+set pastetoggle=<F2>
+set nocompatible              " be iproved, required
+set binary
 filetype off                  " required
 
 imap jk <Esc>
@@ -17,6 +19,10 @@ imap jk <Esc>
 ab pr private
 ab pu public
 ab prsf private static final
+ab asap as soon as possible
+ab adr android
+ab fl fastlane
+ab prm #pragma mark - 
 
 "vim 7th edition 
 set nowrapscan
@@ -41,6 +47,10 @@ let g:ycm_path_to_python_interpreter="/usr/bin/python"
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " prevent clash with youcompleteme, change snippet trigger
 imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
@@ -67,10 +77,12 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plugin 'itchyny/lightline.vim'
 "Plugin 'othree/yajs.vim'
 "Plugin 'maksimr/vim-jsbeautify'
 " Option
 Plugin 'honza/vim-snippets'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -122,6 +134,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+" solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 
 " BOI STUFFS
 " auto close brackets
@@ -252,3 +275,41 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "Crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
 "set backupcopy=yes
+
+" func
+function! Hi()
+    echo "Hi!"
+endfunction
+map <silent> <space>, :call Hi()
+
+" ----------------------------------------------------------------------------
+" <F8> | Color scheme selector
+" ----------------------------------------------------------------------------
+function! s:rotate_colors()
+  if !exists('s:colors')
+    let s:colors = s:colors()
+  endif
+  let name = remove(s:colors, 0)
+  call add(s:colors, name)
+  execute 'colorscheme' name
+  redraw
+  echo name
+endfunction
+nnoremap <silent> <F8> :call <SID>rotate_colors()<cr>
+
+" fuzzy search
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" search
+let g:eregex_default_enable = 0
+let g:EasyGrepCommand=1
+let g:EasyGrepPerlStyle=1
+
+" status line 
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+
+if !has('gui_running')
+  map <,><n> <A-n>
+endif

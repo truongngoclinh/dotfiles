@@ -1,42 +1,94 @@
-" i
+let mapleader = " "
+
+" split window circular
+nnoremap <tab>   <c-w>w
+nnoremap <S-tab> <c-w>W
+
+" qq to record, Q to replay
+nnoremap Q @q
+
+" quit
+inoremap <c-Q> <esc>:q<cr>
+nnoremap <c-Q> :q<cr>
+vnoremap <c-Q> <esc>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>Q :qa!<cr>
+nnoremap <leader>w :wq<cr>
+
+" esc
 inoremap jf <Esc>
+inoremap jk <Esc>
+vnoremap jf <Esc>
+vnoremap jk <Esc>
+xnoremap jf <Esc>
+xnoremap jk <Esc>
+cnoremap jf <c-c>
+cnoremap jk <c-c>
 
 " behavior
 inoremap <c-h> <bs>
+inoremap <c-w> <Up>
+inoremap <c-d> <Right>
+inoremap <c-s> <Down>
+inoremap <c-a> <Left>
 
-inoremap <c-j> <Down>
-inoremap <c-k> <Up>
-inoremap <c-l> <Right>
-inoremap <c-y> <Left>
-
+" insert new line
 inoremap <c-o> <Esc>o
+nnoremap <cr> o<esc>
 
-" n
+" line movement
+"nnoremap <c-j> :m+1<cr>
+"nnoremap <c-k> :m-2<cr>
+nnoremap <silent> <c-k> :move-2<cr>
+nnoremap <silent> <c-j> :move+<cr>
+nnoremap <silent> <c-h> <<
+nnoremap <silent> <c-l> >>
+xnoremap <silent> <c-k> :move-2<cr>gv
+xnoremap <silent> <c-j> :move'>+<cr>gv
+xnoremap <silent> <c-h> <gv
+xnoremap <silent> <c-l> >gv
+xnoremap < <gv
+xnoremap > >gv
+
+" jump to last inserted text
+nnoremap g. :normal! `[v`]<cr><left>
+
+" folding: {}
+nnoremap <leader>{ va{zf
+" toggle fold
+nnoremap <silent> <leader> @=(foldlevel('.')?'za':"\<Space>")<CR>
+
+" movement with screen
 nnoremap j gj
 nnoremap k gk
+
+" basic mapping
 nnoremap L $
 nnoremap H ^
 nnoremap Y y$
 nnoremap B c^
 nnoremap W c$
 nnoremap E yyp
+vnoremap L $
+vnoremap H ^
+nnoremap e ea
+
 nnoremap <c-l> L
 nnoremap <c-h> H
 nnoremap <c-m> M
-nnoremap <cr> o<esc>
-nnoremap <c-j> :m+1<cr>
-nnoremap <c-k> :m-2<cr>
-nnoremap e ea
 
-"
+" Zoom
+function! s:zoom()
+  if winnr('$') > 1
+    tab split
+  elseif len(filter(map(range(tabpagenr('$')), 'tabpagebuflist(v:val + 1)'),
+                  \ 'index(v:val, '.bufnr('').') >= 0')) > 1
+    tabclose
+  endif
+endfunction
+nnoremap <silent> <leader>z :call <sid>zoom()<cr>
+
 "nmap S i<CR><ESC>^m`gk:s/ +$//<CR>``
 
-" Whitespace removal
-"nmap :w<CR> :%s/^\s+$//g<CR>:w<CR>:echo "Written and trimmed whitespace"<CR>
-
-" v
-vnoremap L $
-vnoremap H ^
-vnoremap jk <Esc>
-vnoremap jf <Esc>
-
+" search
+nnoremap <leader>/ :call eregex#toggle()<CR>
