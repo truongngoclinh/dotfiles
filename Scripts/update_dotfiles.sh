@@ -12,6 +12,7 @@ cp /Users/Truong/.zshrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.ideavimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.xvimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.vimrc.keymap /Users/Truong/WSP/github/dotfiles/
+cp /Users/Truong/Library/Application\ Support/Code/User/settings.json /Users/Truong/WSP/github/dotfiles/vs_settings.json
 cp -rf /Users/Truong/.emacs.d /Users/Truong/WSP/github/dotfiles/
 
 # script files

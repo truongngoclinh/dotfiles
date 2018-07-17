@@ -1,0 +1,44 @@
+{
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorCustomizations": {
+        // "editor.background": "#1B1D1E",
+        "editor.background": "#181818",
+        // "sideBar.background": "#181818",
+    },
+    "editor.fontSize": 15,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    // "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "explorer.autoReveal": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    // vim configurations
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "f"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    "explorer.confirmDelete": false,
+    "materialTheme.fixIconsRunning": false,
+}

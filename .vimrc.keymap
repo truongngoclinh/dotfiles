@@ -27,7 +27,7 @@ cnoremap jk <c-c>
 
 " behavior
 inoremap <c-h> <bs>
-inoremap <c-w> <Up>
+" inoremap <c-w> <Up>
 inoremap <c-d> <Right>
 inoremap <c-s> <Down>
 inoremap <c-a> <Left>
