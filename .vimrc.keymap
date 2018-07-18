@@ -1,7 +1,6 @@
 let mapleader = " "
 
-" split window circular
-nnoremap <tab>   <c-w>w
+noremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
 " qq to record, Q to replay
@@ -92,3 +91,9 @@ nnoremap <silent> <leader>z :call <sid>zoom()<cr>
 
 " search
 nnoremap <leader>/ :call eregex#toggle()<CR>
+
+" auto completion
+inoremap <leader>; <Esc>A;<Esc>
+inoremap <leader>, <Esc>A,<Esc>
+" inoremap <leader>{ <Esc>A<space>{<cr><cr>}<esc>ki<tab>
+

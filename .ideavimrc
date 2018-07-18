@@ -1,5 +1,4 @@
 source ~/.vimrc.keymap
-let mapleader = ' '
 
 set ignorecase
 set incsearch

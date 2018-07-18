@@ -22,6 +22,30 @@
     "vim.insertModeKeyBindings": [
         {
             "before": [
+                "c-l"
+            ],
+            "after": [
+                "<Right>"
+            ]
+        },
+        {
+            "before": [
+                "c-j"
+            ],
+            "after": [
+                "<Down>"
+            ]
+        },
+        {
+            "before": [
+                "c-k"
+            ],
+            "after": [
+                "<Up>"
+            ]
+        },
+        {
+            "before": [
                 "j",
                 "f"
             ],
@@ -38,7 +62,100 @@
                 "<Esc>"
             ]
         },
+        {
+            "before": [
+                "<leader>",
+                ";"
+            ],
+            "after": [
+                "<Esc>",
+                "A",
+                ";",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ","
+            ],
+            "after": [
+                "<Esc>",
+                "A",
+                ",",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                ",",
+                "{"
+            ],
+            "after": [
+                "<Esc>",
+                "A",
+                "<space>",
+                "{",
+                "<cr>"
+            ]
+        }
     ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "x",
+                "i"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ";"
+            ],
+            "after": [
+                "A",
+                ";",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ","
+            ],
+            "after": [
+                "A",
+                ",",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                ",",
+                "{"
+            ],
+            "after": [
+                "A",
+                "<space>",
+                "{",
+                "<cr>"
+            ]
+        },
+        {
+            "before": [
+                "<cr>"
+            ],
+            "after": [
+                "o",
+                "<esc>"
+            ],
+        }
+    ],
+    "vim.leader": "<space>",
+    // end vim config
     "explorer.confirmDelete": false,
     "materialTheme.fixIconsRunning": false,
 }
