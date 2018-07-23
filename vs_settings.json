@@ -1,14 +1,31 @@
 {
     "workbench.iconTheme": "eq-material-theme-icons-palenight",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Base16 Tomorrow Dark",
     "workbench.colorCustomizations": {
-        // "editor.background": "#1B1D1E",
         "editor.background": "#181818",
-        // "sideBar.background": "#181818",
     },
+    "editor.tokenColorCustomizations": {
+        "[Base16 Tomorrow Dark]": {
+            "textMateRules": [
+                {
+                    "name": "Object Property Names",
+                    "scope": [
+                        "meta.object-literal.key"
+                    ],
+                    "settings": {
+                        "foreground": "#b5bd68"
+                    }
+                },
+            ]
+        },
+    },
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
     "editor.fontSize": 15,
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
+    "editor.wordWrap": "on",
+    // "editor.snippetSuggestions": "top",
     // "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "explorer.autoReveal": true,
     "java.errors.incompleteClasspath.severity": "ignore",
@@ -89,7 +106,7 @@
         {
             "before": [
                 ",",
-                "{"
+                ","
             ],
             "after": [
                 "<Esc>",
@@ -98,9 +115,22 @@
                 "{",
                 "<cr>"
             ]
-        }
+        },
     ],
     "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ],
+            // not work
+            "after": [
+                "react"
+            ]
+        },
         {
             "before": [
                 "s"
@@ -134,8 +164,8 @@
         },
         {
             "before": [
-                ",",
-                "{"
+                "<leader>",
+                "<leader>"
             ],
             "after": [
                 "A",
@@ -158,4 +188,6 @@
     // end vim config
     "explorer.confirmDelete": false,
     "materialTheme.fixIconsRunning": false,
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
 }

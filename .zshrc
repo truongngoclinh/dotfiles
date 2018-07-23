@@ -241,7 +241,7 @@ alias bud='source ~/.bash_profile'
 alias rn='react-native'
 alias rni='react-native init'
 alias rnra='react-native run-android'
-alias rnri='react-native run-ios'
+alias rnri='react-native run-ios  --simulator "iPhone 7"'
 alias rnh='react-native --help'
 
 # fastlane
@@ -337,3 +337,12 @@ export PATH="$PATH:$HOME/.rvm/bin"
 source ~/.profile
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
+# react-native
+function rn-clean() {
+  watchman watch-del-all
+  rm -rf $TMPDIR/react-*
+  rm -rf $TMPDIR/haste-*
+  rm -rf $TMPDIR/metro-*
+  npm start -- --reset-cache
+}
