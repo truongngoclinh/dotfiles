@@ -95,5 +95,6 @@ nnoremap <leader>/ :call eregex#toggle()<CR>
 " auto completion
 inoremap <leader>; <Esc>A;<Esc>
 inoremap <leader>, <Esc>A,<Esc>
+nnoremap <leader>; A;<Esc>
 " inoremap <leader>{ <Esc>A<space>{<cr><cr>}<esc>ki<tab>
 
