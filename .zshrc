@@ -43,7 +43,7 @@ alias gtl='git describe --tags `git rev-list --tags --max-count=1`'
 alias gptvn='git push vn --tags'
 alias gcl='git clone'
 alias gst='git status'
-alias gb='git branch'
+alias gb='git branch --sort=committerdate'
 alias gbsut='git branch --set-upstream-to' # origin/branch_name
 alias gbvv='git branch -vv' # check tracked branch
 alias gbr='git branch -r'
@@ -70,6 +70,7 @@ alias gcc='git checkout --' # discard change
 alias gchh='git reset HEAD' # unstage file
 alias gch='git reset' # unstage file
 # alias gcs='git reset --soft'
+alias gcldff='git clean -ffdx'
 alias gcld='git clean -df'
 alias gr='git rebase'
 alias grm='git rebase master'
@@ -121,6 +122,7 @@ alias gsa='git stash apply'
 alias gsp='git stash pop'
 alias gsd='git stash drop'
 alias gsl='git stash list'
+alias gro='git reset' #reset overzealous 'git add' run
 alias grs='git reset --soft'
 alias grhead='git reset HEAD'
 alias grh='git reset --hard'
