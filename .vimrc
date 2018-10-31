@@ -152,17 +152,17 @@ inoremap {<CR> {<CR>}<C-o>O
 inoremap (<CR> (<CR>)<C-o>O
 inoremap {{<CR> {{<CR>}}<C-o>O
 inoremap {(<CR> {(<CR>)}<C-o>O
-inoremap {{<Space> {{}}<Esc>hi
-inoremap {(<Space> {()}<Esc>hi
-inoremap ({<Space> ({})<Esc>hi
+" inoremap {{<Space> {{}}<Esc>hi
+" inoremap {(<Space> {()}<Esc>hi
+" inoremap ({<Space> ({})<Esc>hi
 "inoremap <<Space> <><Esc>i // react native only, python dont need
-inoremap <<CR> <<CR>/><C-o>O
+" inoremap <<CR> <<CR>/><C-o>O
 "inoremap "<Space> ""<Esc>i // conflict with below syntax
-inoremap ("<Space> ("")<Esc>hi
-inoremap (<Space> ()<Esc>i
-inoremap {<Space> {}<Esc>i
-inoremap ([<CR> ([<CR>])<C-o>O
-inoremap <F3> gg=G
+" inoremap ("<Space> ("")<Esc>hi
+" inoremap (<Space> ()<Esc>i
+" inoremap {<Space> {}<Esc>i
+" inoremap ([<CR> ([<CR>])<C-o>O
+" inoremap <F3> gg=G
 nnoremap == gg=G
 vnoremap == gg=G
 inoremap == gg=G
@@ -277,11 +277,11 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 "set backupcopy=yes
 
 " func
-function! Hi()
-    echo "Hi!"
-endfunction
-map <silent> <space>, :call Hi()
-
+" function! Hi()
+"     echo "Hi!"
+" endfunction
+" map <silent> <space>, :call Hi()
+" 
 " ----------------------------------------------------------------------------
 " <F8> | Color scheme selector
 " ----------------------------------------------------------------------------

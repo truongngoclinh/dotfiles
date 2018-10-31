@@ -78,12 +78,12 @@ nnoremap <c-m> M
 
 " Zoom
 function! s:zoom()
-  if winnr('$') > 1
-    tab split
-  elseif len(filter(map(range(tabpagenr('$')), 'tabpagebuflist(v:val + 1)'),
-                  \ 'index(v:val, '.bufnr('').') >= 0')) > 1
-    tabclose
-  endif
+    if winnr('$') > 1
+        tab split
+    elseif len(filter(map(range(tabpagenr('$')), 'tabpagebuflist(v:val + 1)'),
+                \ 'index(v:val, '.bufnr('').') >= 0')) > 1
+        tabclose
+    endif
 endfunction
 nnoremap <silent> <leader>z :call <sid>zoom()<cr>
 
@@ -93,8 +93,10 @@ nnoremap <silent> <leader>z :call <sid>zoom()<cr>
 nnoremap <leader>/ :call eregex#toggle()<CR>
 
 " auto completion
-inoremap <leader>; <Esc>A;<Esc>
-inoremap <leader>, <Esc>A,<Esc>
+" inoremap <leader>; <Esc>A;<Esc>
+
+" inoremap <leader>, <Esc>A,<Esc>
+nnoremap <leader>, A,<Esc>
 nnoremap <leader>; A;<Esc>
 " inoremap <leader>{ <Esc>A<space>{<cr><cr>}<esc>ki<tab>
 

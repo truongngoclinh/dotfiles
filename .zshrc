@@ -39,7 +39,12 @@ plugins=(zsh-autosuggestions)
 bindkey '^ ' autosuggest-accept
  
 # git
-alias gtl='git describe --tags `git rev-list --tags --max-count=1`'
+alias gpt='git push --tags'
+alias gtl='git tag --list'
+alias gt='git tag'
+alias gtd='git tag --delete'
+alias gpd='git push --delete' 
+alias gtlt='git describe --tags `git rev-list --tags --max-count=1`'
 alias gptvn='git push vn --tags'
 alias gcl='git clone'
 alias gst='git status'
@@ -164,6 +169,7 @@ alias -s c=vim
 alias -s cpp=vim
  
 # specific location
+alias mobot='cd /Users/Truong/WSP_OTHERS/mattermost_bot'
 alias download='cd ~/Downloads'
 alias desktop='cd ~/Desktop'
 alias user='cd ~'
