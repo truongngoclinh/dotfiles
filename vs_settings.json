@@ -2,7 +2,7 @@
     "workbench.iconTheme": "eq-material-theme-icons-palenight",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "workbench.colorCustomizations": {
-        "editor.background": "#181818",
+        "editor.background": "#181818"
         // "sideBar.border": "#ffffff"
     },
     "editor.tokenColorCustomizations": {
@@ -10,15 +10,13 @@
             "textMateRules": [
                 {
                     "name": "Object Property Names",
-                    "scope": [
-                        "meta.object-literal.key"
-                    ],
+                    "scope": ["meta.object-literal.key"],
                     "settings": {
                         "foreground": "#b5bd68"
                     }
-                },
+                }
             ]
-        },
+        }
     },
     "prettier.tabWidth": 4,
     "prettier.singleQuote": true,
@@ -39,165 +37,72 @@
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": [
-                "c-l"
-            ],
-            "after": [
-                "<Right>"
-            ]
+            "before": ["c-l"],
+            "after": ["<Right>"]
         },
         {
-            "before": [
-                "c-j"
-            ],
-            "after": [
-                "<Down>"
-            ]
+            "before": ["c-j"],
+            "after": ["<Down>"]
         },
         {
-            "before": [
-                "c-k"
-            ],
-            "after": [
-                "<Up>"
-            ]
+            "before": ["c-k"],
+            "after": ["<Up>"]
         },
         {
-            "before": [
-                "j",
-                "f"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+            "before": ["j", "f"],
+            "after": ["<Esc>"]
         },
         {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
         },
         {
-            "before": [
-                "<leader>",
-                ";"
-            ],
-            "after": [
-                "<Esc>",
-                "A",
-                ";",
-                "<Esc>"
-            ]
+            "before": ["<leader>", ";"],
+            "after": ["<Esc>", "A", ";", "<Esc>"]
         },
         {
-            "before": [
-                "<leader>",
-                ","
-            ],
-            "after": [
-                "<Esc>",
-                "A",
-                ",",
-                "<Esc>"
-            ]
+            "before": ["<leader>", ","],
+            "after": ["<Esc>", "A", ",", "<Esc>"]
         },
         {
-            "before": [
-                ",",
-                ","
-            ],
-            "after": [
-                "<Esc>",
-                "A",
-                "<space>",
-                "{",
-                "<cr>"
-            ]
-        },
+            "before": [",", ","],
+            "after": ["<Esc>", "A", "<space>", "{", "<cr>"]
+        }
     ],
     "vim.normalModeKeyBindings": [
         {
-            "before": [
-                "<leader>",
-                "r"
-            ],
-            "commands": [
-                "workbench.action.showCommands",
-            ],
+            "before": ["<leader>", "r"],
+            "commands": ["workbench.action.showCommands"],
             // not work
-            "after": [
-                "react"
-            ]
+            "after": ["react"]
         },
         {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "x",
-                "i"
-            ]
+            "before": ["s"],
+            "after": ["x", "i"]
         },
         {
-            "before": [
-                "<leader>",
-                ";"
-            ],
-            "after": [
-                "A",
-                ";",
-                "<Esc>"
-            ]
+            "before": ["<leader>", ";"],
+            "after": ["A", ";", "<Esc>"]
         },
         {
-            "before": [
-                "<leader>",
-                ","
-            ],
-            "after": [
-                "A",
-                ",",
-                "<Esc>"
-            ]
+            "before": ["<leader>", ","],
+            "after": ["A", ",", "<Esc>"]
         },
         {
-            "before": [
-                "<leader>",
-                "<leader>"
-            ],
-            "after": [
-                "A",
-                "<space>",
-                "{",
-                "<cr>"
-            ]
+            "before": ["<leader>", "<leader>"],
+            "after": ["A", "<space>", "{", "<cr>"]
         },
         {
-            "before": [
-                "<cr>"
-            ],
-            "after": [
-                "o",
-                "<esc>"
-            ],
+            "before": ["<cr>"],
+            "after": ["o", "<esc>"]
         },
         {
-            "before": [
-                "e"
-            ],
-            "after": [
-                "e",
-                "a"
-            ],
+            "before": ["e"],
+            "after": ["e", "a"]
         }
     ],
     "vim.leader": "<space>",
     // end vim config
     "explorer.confirmDelete": false,
-    "materialTheme.fixIconsRunning": false,
-    "explorer.confirmDragAndDrop": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false
 }

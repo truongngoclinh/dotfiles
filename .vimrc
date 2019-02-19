@@ -1,4 +1,5 @@
 source ~/.vimrc.keymap
+set encoding=utf-8
 
 set pastetoggle=<F2>
 set nocompatible              " be iproved, required
@@ -42,7 +43,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:ycm_path_to_python_interpreter="/usr/bin/python"
+
+" let g:ycm_path_to_python_interpreter="/usr/local/Cellar/python/3.7.2/bin/python3"
+let g:ycm_path_to_python_interpreter="/usr/bin/python2.7"
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -313,3 +316,11 @@ let g:lightline = {
 if !has('gui_running')
   map <,><n> <A-n>
 endif
+
+function! CopyMatches(reg)
+  let hits = []
+  %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/gne
+  let reg = empty(a:reg) ? '+' : a:reg
+  execute 'let @'.reg.' = join(hits, "\n") . "\n"'
+endfunction
+command! -register CopyMatches call CopyMatches(<q-reg>)<Paste>

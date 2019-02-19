@@ -2,9 +2,12 @@
 #
 # ******************** boiboi preferences **********************
 # local: change 'ngoclinh.truong' to 'Truong' on PATH
+
 ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
 
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export LDFLAGS="-L/usr/local/opt/gettext/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/Users/Truong/Library/Android/sdk/
@@ -15,12 +18,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
-export PATH=$PATH:/usr/local/mysql/bin
 
-#apache maven
-#export M2_HOME=/Users/Truong/downloads/apache-maven-3.1.1
 export M2_HOME=/Users/Truong/downloads/apache-maven-3.5.0
 export PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:/usr/local/mysql/bin
 
 #grunt
 export PATH=$PATH:/usr/local/share/npm/bin/
@@ -224,7 +225,7 @@ alias stbtc='sh $SCRIPT_PATH/gw_tc_build_and_start.sh' # build and start test ca
 
 # config
 alias v='nvim'
-#alias vi='nvim'
+alias vi='nvim'
 alias vim='nvim'
 alias py='python'
 alias e='emacs'
@@ -354,3 +355,4 @@ function rn-clean() {
   rm -rf $TMPDIR/metro-*
   npm start -- --reset-cache
 }
+export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
