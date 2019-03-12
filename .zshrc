@@ -219,6 +219,7 @@ alias lang_ac_android='sh $SCRIPT_PATH/update_lang_ac_android.sh'
 alias lang_ac_ios='sh $SCRIPT_PATH/update_lang_ac_ios.sh'
 alias vpn='sh $SCRIPT_PATH/vpn.sh'
 alias lang_ac_be='cd /Users/Truong/WSP_BE/cyberpay_service_mobile/scripts/; rake lang'
+alias cdate='sh $SCRIPT_PATH/date.sh'
 
 # automation fw
 alias sttc='sh $SCRIPT_PATH/gw_tc_start.sh' # start test case
