@@ -22,6 +22,9 @@ export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
 export M2_HOME=/Users/Truong/downloads/apache-maven-3.5.0
 export PATH=$PATH:$M2_HOME/bin
 export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:/usr/local/
+export PATH=$PATH:/usr/local/lib/node_modules/typescript/bin
+
 
 #grunt
 export PATH=$PATH:/usr/local/share/npm/bin/
@@ -73,6 +76,7 @@ alias gcH='git checkout HEAD --' #path of file to revert
 alias gccH='git checkout HEAD -- .'
 alias gcca='git checkout -- .'
 alias gcc='git checkout --' # discard change
+alias gcd='git checkout .'
 alias gchh='git reset HEAD' # unstage file
 alias gch='git reset' # unstage file
 # alias gcs='git reset --soft'
@@ -147,6 +151,7 @@ alias gsu='git submodule update'
 alias gsi='git submodule --init'
 alias gsui='git submodule update --init'
 alias gsuir='git submodule update --init --recursive'
+alias gsubl='git submodule --quiet foreach --recursive `echo $name`'
  
 # commands
 alias lla='ls -la'
@@ -205,6 +210,9 @@ alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
 alias cbptrans='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
 alias scripts='cd /Users/Truong/Script'
 alias gfw='cd /Users/Truong/WSP_IOS/appium_automationTest/GAutomationFW'
+alias ocharn='cd ~/WSP_OCHA/ocha-crm-rn'
+alias ochaios='cd ~/WSP_OCHA/OchaCRM'
+alias ocha='cd ~/WSP_OCHA/ocha-crm'
 
 #appium
 alias appiumDir='cd /Users/Truong/appium'
