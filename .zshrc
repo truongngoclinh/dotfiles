@@ -80,6 +80,7 @@ alias gcc='git checkout --' # discard change
 alias gcd='git checkout .'
 alias gchh='git reset HEAD' # unstage file
 alias gch='git reset' # unstage file
+alias gd='git diff'
 # alias gcs='git reset --soft'
 alias gcldff='git clean -ffdx'
 alias gcld='git clean -df'
