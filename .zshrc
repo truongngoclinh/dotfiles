@@ -259,6 +259,7 @@ alias bcf='vim ~/.bash_profile'
 alias ecf='vim ~/.emacs.d/init.el'
 alias zud='source ~/.zshrc'
 alias bud='source ~/.bash_profile'
+alias pb='/usr/libexec/PlistBuddy'
 
 alias rn='react-native'
 alias rni='react-native init'
