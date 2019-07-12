@@ -1,0 +1,7 @@
+# ./Gemfile
+source "https://rubygems.org"
+gem "fastlane", :git => "https://github.com/fastlane/fastlane.git"
+gem "rake"
+gem "seaios", :git => "ssh://gitlab@git.garena.com:2222/ios-dev/seaios-gem.git"
+gem "xcode-install"
+
