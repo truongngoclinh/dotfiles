@@ -1,0 +1,179 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Base16 Tomorrow Dark",
+  "workbench.colorCustomizations": {
+    "editor.background": "#181818"
+    // "editor.background": "#2b2b2b" // as bg
+    // "sideBar.border": "#ffffff"
+  },
+  "editor.tokenColorCustomizations": {
+    "[Base16 Tomorrow Dark]": {
+      "textMateRules": [
+        {
+          "name": "Object Property Names",
+          "scope": ["meta.object-literal.key"],
+          "settings": {
+            "foreground": "#b5bd68"
+          }
+        }
+      ]
+    }
+  },
+  // "prettier.tabWidth": 4,
+  "prettier.singleQuote": false,
+  "editor.fontSize": 15,
+  // "editor.formatOnSave": true,
+  // "editor.wordWrap": "on",
+  // "editor.snippetSuggestions": "top",
+  // "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "explorer.autoReveal": true,
+  // "java.errors.incompleteClasspath.severity": "ignore",
+
+  // typescript configs
+  "prettier.semi": false,
+  "prettier.trailingComma": "es5",
+
+  // vim configs
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["c-l"],
+      "after": ["<Right>"]
+    },
+    {
+      "before": ["c-j"],
+      "after": ["<Down>"]
+    },
+    {
+      "before": ["c-k"],
+      "after": ["<Up>"]
+    },
+    {
+      "before": ["j", "f"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<leader>", ";"],
+      "after": ["<Esc>", "A", ";", "<Esc>"]
+    },
+    {
+      "before": ["<leader>", ","],
+      "after": ["<Esc>", "A", ",", "<Esc>"]
+    },
+    {
+      "before": [",", ","],
+      "after": ["<Esc>", "A", "<space>", "{", "<cr>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "r"],
+      "commands": ["workbench.action.showCommands"],
+      // not work
+      "after": ["react"]
+    },
+    {
+      "before": ["s"],
+      "after": ["x", "i"]
+    },
+    {
+      "before": ["<leader>", ";"],
+      "after": ["A", ";", "<Esc>"]
+    },
+    {
+      "before": ["<leader>", ","],
+      "after": ["A", ",", "<Esc>"]
+    },
+    {
+      "before": ["<leader>", "<leader>"],
+      "after": ["A", "<space>", "{", "<cr>"]
+    },
+    {
+      "before": ["<cr>"],
+      "after": ["o", "<esc>"]
+    },
+    {
+      "before": ["e"],
+      "after": ["e", "a"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  // end vim config
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.tsx": "typescript"
+  },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.js": { "when": "$(basename).tsx" }
+  },
+  "javascript.validate.enable": false,
+
+  "breadcrumbs.enabled": true,
+  // "files.autoSave": "onFocusChange",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "window.zoomLevel": 0,
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.tslint": true
+  // },
+  "code-runner.defaultLanguage": "javascript",
+  "code-runner.executorMap": {
+    "javascript": "node"
+  },
+  "tslint.jsEnable": true,
+
+  // test
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  // "[typescript]": {
+  //   "editor.formatOnSave": true
+  // },
+  // "[typescriptreact]": {
+  //   "editor.formatOnSave": true
+  // },
+  "prettier.tslintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "prettier.jsxSingleQuote": false
+}
