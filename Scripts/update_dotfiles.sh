@@ -13,11 +13,12 @@ cp /Users/Truong/.ideavimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.xvimrc /Users/Truong/WSP/github/dotfiles/
 cp /Users/Truong/.vimrc.keymap /Users/Truong/WSP/github/dotfiles/
 cp -rf /Users/Truong/.emacs.d /Users/Truong/WSP/github/dotfiles/
+cp /Users/Truong/Library/Application Support/Code - Insiders/User/keybindings.json
 
 # vs code
 #cp /Users/Truong/Library/Application\ Support/Code/User/settings.json /Users/Truong/WSP/github/dotfiles/vs_settings.json
-cp /Users/Truong/Library/Application Support/Code - Insiders/User/keybindings.json /Users/Truong/WSP/github/dotfiles/vs_keybindings.json
-cp /Users/Truong/Library/Application Support/Code - Insiders/User/settings.json /Users/Truong/WSP/github/dotfiles/vs_settings.json
+cp /Users/Truong/Library/Application\ Support/Code\ - Insiders/User/keybindings.json /Users/Truong/WSP/github/dotfiles/vs_keybindings.json
+cp /Users/Truong/Library/Application\ Support/Code\ - Insiders/User/settings.json /Users/Truong/WSP/github/dotfiles/vs_settings.json
 
 # script files
 cp -r /Users/Truong/Script/* /Users/Truong/WSP/github/dotfiles/Scripts/
