@@ -1,8 +1,7 @@
 source ~/.vimrc.keymap
-set encoding=utf-8
-
+set encoding=UTF-8
+set autoread 
 set pastetoggle=<F2>
-set nocompatible              " be iproved, required
 set binary
 filetype off                  " required
 
@@ -50,10 +49,12 @@ let g:ycm_path_to_python_interpreter="/usr/bin/python2.7"
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"autocmd vimenter * NERDTree
+
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
 " prevent clash with youcompleteme, change snippet trigger
 imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
@@ -71,6 +72,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
@@ -88,6 +90,11 @@ Plugin 'honza/vim-snippets'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'joshdick/onedark.vim'
 
+"Plugin 'vim-airline/vim-airline'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'ervandew/supertab'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,6 +110,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+let g:rainbow_active = 1
 
 " NERD tree
 map <C-t> :NERDTreeTabsToggle<CR>
@@ -117,6 +126,8 @@ let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
 let g:nerdtree_tabs_open_on_gui_startup=1
 let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 "close vim if only nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -344,3 +355,7 @@ if (empty($TMUX))
 endif
 
 colorscheme onedark
+
+command! PPJ %!python -m json.tool
+command! PPH !tidy -mi -html -wrap 0 %
+command! PPX !tidy -mi -xml -wrap 0 %

@@ -7,23 +7,23 @@ echo "\033[0;32m ==> Starting... \033[0m"
 echo "\033[0;33m ==> Moving dotfiles to local repo \033[0m"
 
 # config files
-cp /Users/Truong/.vimrc /Users/Truong/WSP/github/dotfiles/
-cp /Users/Truong/.zshrc /Users/Truong/WSP/github/dotfiles/
-cp /Users/Truong/.ideavimrc /Users/Truong/WSP/github/dotfiles/
-cp /Users/Truong/.xvimrc /Users/Truong/WSP/github/dotfiles/
-cp /Users/Truong/.vimrc.keymap /Users/Truong/WSP/github/dotfiles/
-cp -rf /Users/Truong/.emacs.d /Users/Truong/WSP/github/dotfiles/
-cp /Users/Truong/Library/Application Support/Code - Insiders/User/keybindings.json
+cp /Users/linh.truong/.vimrc /Users/linh.truong/WSP/github/dotfiles/
+cp /Users/linh.truong/.zshrc /Users/linh.truong/WSP/github/dotfiles/
+cp /Users/linh.truong/.ideavimrc /Users/linh.truong/WSP/github/dotfiles/
+cp /Users/linh.truong/.xvimrc /Users/linh.truong/WSP/github/dotfiles/
+cp /Users/linh.truong/.vimrc.keymap /Users/linh.truong/WSP/github/dotfiles/
+cp -rf /Users/linh.truong/.emacs.d /Users/linh.truong/WSP/github/dotfiles/
+cp /Users/linh.truong/Library/Application Support/Code - Insiders/User/keybindings.json
 
 # vs code
-#cp /Users/Truong/Library/Application\ Support/Code/User/settings.json /Users/Truong/WSP/github/dotfiles/vs_settings.json
-cp /Users/Truong/Library/Application\ Support/Code\ - Insiders/User/keybindings.json /Users/Truong/WSP/github/dotfiles/vs_keybindings.json
-cp /Users/Truong/Library/Application\ Support/Code\ - Insiders/User/settings.json /Users/Truong/WSP/github/dotfiles/vs_settings.json
+#cp /Users/linh.truong/Library/Application\ Support/Code/User/settings.json /Users/linh.truong/WSP/github/dotfiles/vs_settings.json
+cp /Users/linh.truong/Library/Application\ Support/Code\ - Insiders/User/keybindings.json /Users/linh.truong/WSP/github/dotfiles/vs_keybindings.json
+cp /Users/linh.truong/Library/Application\ Support/Code\ - Insiders/User/settings.json /Users/linh.truong/WSP/github/dotfiles/vs_settings.json
 
 # script files
-cp -r /Users/Truong/Script/* /Users/Truong/WSP/github/dotfiles/Scripts/
+cp -r /Users/linh.truong/Script/* /Users/linh.truong/WSP/github/dotfiles/Scripts/
 
-cd /Users/Truong/WSP/github/dotfiles/
+cd /Users/linh.truong/WSP/github/dotfiles/
 
 echo "\033[0;33m ==> Fetching origin changes \033[0m"
 git pull 
