@@ -1,25 +1,30 @@
 # If you come from bash you might have to change your $PATH.
 #
 # ******************** boiboi preferences **********************
-# local: change 'ngoclinh.truong' to 'Truong' on PATH
 
-ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
+#ANT_HOME=/Users/Truong/Downloads/apache-ant-1.9.7
+
+# ONE APP
+export POINT_SDK_APP_KEY="point-partner-test1-app-stg-a"
+export POINT_SDK_APP_ID="point-partner-test1-ap"
+# ###
 
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_HOME=/Users/Truong/Library/Android/sdk/
+#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+export ANDROID_HOME=/Users/linh.truong/Library/Android/sdk/
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-#export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools
 #export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 export JAVA_OPTS="-XX:PermSize=256m -XX:MaxPermSize=512m"
 
-export M2_HOME=/Users/Truong/downloads/apache-maven-3.5.0
+#export M2_HOME=/Users/Truong/downloads/apache-maven-3.5.0
 export PATH=$PATH:$M2_HOME/bin
 export PATH=$PATH:/usr/local/mysql/bin
 export PATH=$PATH:/usr/local/
@@ -36,7 +41,7 @@ export PATH=$PATH:$GRUNT_HOME/
 # disable ctrl-D closes terminal: http://unix.stackexchange.com/questions/139115/disable-ctrl-d-window-close-in-terminator-terminal-emulator
 set -o ignoreeof
  
-DEFAULT_USER='Truong'
+DEFAULT_USER='linh.truong'
  
 plugins=(zsh-autosuggestions)
 
@@ -114,6 +119,7 @@ alias gpl='git pull'
 alias gplvn='git pull vn'
 alias gplo='git pull origin master'
 alias gplr='git pull --rebase'
+alias gplroa='git pull --rebase oneapp master'
 alias gplrvn='git pull vn --rebase'
 alias gplro='git pull --rebase origin master'
 alias gplrovni='git pull --rebase vn master_vn'
@@ -151,6 +157,7 @@ alias grv='git remote -v'
 alias grsurl='git remote set-url'
 alias gsabm='git submodule add -b master' #[URL to Git repo]
 alias gsu='git submodule update'
+alias gss='git submodule status'
 alias gsi='git submodule --init'
 alias gsui='git submodule update --init'
 alias gsuir='git submodule update --init --recursive'
@@ -178,12 +185,12 @@ alias -s c=vim
 alias -s cpp=vim
  
 # specific location
-alias mobot='cd /Users/Truong/WSP_OTHERS/mattermost_bot'
+#alias mobot='cd /Users/Truong/WSP_OTHERS/mattermost_bot'
 alias download='cd ~/Downloads'
 alias desktop='cd ~/Desktop'
 alias user='cd ~'
 alias sshcf='cd ~/.ssh'
-alias book='cd /Users/Truong/documents/github/Books/book-warehouse'
+#alias book='cd /Users/Truong/documents/github/Books/book-warehouse'
 alias smw='cd ~/SMW'
 alias wsp='cd ~/WSP'
 alias wspbe='cd ~/WSP_BE'
@@ -207,34 +214,22 @@ alias cbpservice='cd ~/WSP_BE/cyberpay_service_mobile'
 alias cbpfeservice='cd ~/WSP_BE/cyberpay_webclient_backend'
 alias cbpfeseller='cd ~/WSP_FE/cyberpay_webclient_frontend'
 alias gasios='cd ~/WSP_IOS/gas-ios'
-alias github='cd ~/WSP/github'
+alias github='cd ~/WSP_ANDROID/github'
 alias githubios='cd ~/WSP_IOS/github'
-alias toppay_reactnative='cd ~/WSP/GARENA/toppay_reactnative'
-alias cbptrans='cd /Users/Truong/WSP/GARENA/SG/cyberpay-admin-app/misc/scripts'
-alias scripts='cd /Users/Truong/Script'
-alias gfw='cd /Users/Truong/WSP_IOS/appium_automationTest/GAutomationFW'
-alias ocharn='cd ~/WSP_OCHA/ocha-crm-rn'
-alias ochaios='cd ~/WSP_OCHA/OchaCRM'
-alias ocha='cd ~/WSP_OCHA/ocha-crm'
-
-#appium
-alias appiumDir='cd /Users/Truong/appium'
-alias surefire='cd /Users/Truong/WSP_IOS/appium_automationTest/airpay_counter_ios_automation/target/surefire-reports'
+alias scripts='cd /Users/linh.truong/Script'
+alias oa='cd ~/WSP_ANDROID/RAKUTEN/local/android-one-app/'
+alias oam='cd ~/WSP_ANDROID/RAKUTEN/android-one-app/'
+alias rakuten='cd ~/WSP_ANDROID/RAKUTEN/'
 
 # run scripts
-SCRIPT_PATH=/Users/Truong/Script
+SCRIPT_PATH=/Users/linh.truong/Script
 alias stappium='sh $SCRIPT_PATH/start_appium_server.sh'
 alias stdotfiles='sh $SCRIPT_PATH/update_dotfiles.sh'
 alias stdaily='sh $SCRIPT_PATH/update_daily.sh'
 alias lang_ac_android='sh $SCRIPT_PATH/update_lang_ac_android.sh'
 alias lang_ac_ios='sh $SCRIPT_PATH/update_lang_ac_ios.sh'
 alias vpn='sh $SCRIPT_PATH/vpn.sh'
-alias lang_ac_be='cd /Users/Truong/WSP_BE/cyberpay_service_mobile/scripts/; rake lang'
-alias cdate='sh $SCRIPT_PATH/date.sh'
-
-# automation fw
-alias sttc='sh $SCRIPT_PATH/gw_tc_start.sh' # start test case
-alias stbtc='sh $SCRIPT_PATH/gw_tc_build_and_start.sh' # build and start test case
+alias oal='cd /Users/linh.truong/WSP_ANDROID/RAKUTEN/local && sh generate_localized_strings.sh'
 
 # config
 alias v='nvim'
@@ -274,7 +269,7 @@ alias f='fastlane'
  
 # Path to your oh-my-zsh installation.
 #export ZSH=/Users/ngoclinh.truong/.oh-my-zsh
-export ZSH=/Users/Truong/.oh-my-zsh
+export ZSH=/Users/linh.truong/.oh-my-zsh
  
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -358,7 +353,7 @@ export LANG=en_US.UTF-8
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-source ~/.profile
+#source ~/.profile
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 

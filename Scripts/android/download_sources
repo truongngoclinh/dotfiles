@@ -1,0 +1,14 @@
+#!/bin/bash
+_now=$(date)
+# set -x
+echo "Downloading files from transify"
+
+python download_sources.py
+
+\cp -fr strings_en.xml ../app/src/main/res/values/strings.xml
+\cp -fr strings_vi.xml ../app/src/main/res/values-vi/strings.xml
+
+\cp -fr strings_en.xml ../ReactAssist/src/main/res/values/strings.xml
+\cp -fr strings_vi.xml ../ReactAssist/src/main/res/values-vi/strings.xml
+
+echo "Files Copied to project directory"

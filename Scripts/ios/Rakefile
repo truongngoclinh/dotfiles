@@ -1,0 +1,69 @@
+######################## Generate Elements Info ########################
+#desc "Generate GElements.java file, os_type: android|ios, team_name: apa|apc|foody|ocha"
+#task :gen, [:os_type, :team_name] do |t, args|
+    #os_type = args[:os_type]
+    #team_name = args[:team_name]
+    #py_file = "auto_generate_elements_info"
+    #puts "Generating #{os_type.upcase}GElements.java file for platform: #{os_type}, team #{team_name}"
+    #system("python -c \"import sys; sys.dont_write_bytecode = True; import #{py_file}; #{py_file}.genFile(\'#{os_type}\', \'#{team_name}\')\"")
+#end
+
+######################## Test cases operation ##########################
+desc "Bundle react native"
+task :bundle do
+    sh "bundle_ios.sh"
+end
+
+desc "Fix invalid path due to rn 0.46.4"
+task :fix do
+    _update_event_emitter_path()
+    _update_rct_animation_path()
+end
+
+desc "Bump version"
+task :bump, [:country] do |t, args|
+    #country = args.fetch(:country, "vn")
+    puts("not implemented yet")
+end
+
+desc "Build with current bundle"
+task :build_internal_local_bundle, [:country] do |t, args|
+    country = args.fetch(:country, "vn")
+    system("fastlane local country:#{country}")
+end
+
+desc "Build internal with react native branch"
+task :build_internal, [:rn_branch, :country] do |t, args|
+    country = args.fetch(:country, "vn")
+    rn_branch = args.fetch(:rn_branch, "pre-development")
+    checkout_rn_submodule(rn_branch)
+    system("fastlane dev country:#{country} branch_rn:#{rn_branch}")
+end
+
+desc "Build release"
+task :build_release, [:country] do |t, args|
+    country = args.fetch(:country, "vn")
+    rn_branch = "master_vn"
+    checkout_rn_submodule(rn_branch)
+    system("fastlane release country:#{country} branch_rn:#{rn_branch}")
+end
+
+def checkout_rn_submodule(branch)
+    system("rm -rf ocha-crm-rn")
+    system("git clone https://git.ved.com.vn/Mobile/ocha-crm-rn.git")
+    system("cd ocha-crm-rn")
+    system("git checkout #{branch}")
+    system("npm install")
+    system("cd ..")
+    system("pod install")
+    system("cd fastlane")
+end
+
+def _update_event_emitter_path()
+    system("python -c 'import sys; sys.dont_write_bytecode = True; import update_event_emitter_path; update_event_emitter_path.update()'")
+end
+
+def _update_rct_animation_path()
+    system("python -c 'import sys; sys.dont_write_bytecode = True; import update_rct_animation_path; update_rct_animation_path.update()'")
+end
+
