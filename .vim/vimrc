@@ -58,8 +58,6 @@ au Syntax * RainbowParenthesesLoadBraces
 " prevent clash with youcompleteme, change snippet trigger
 imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
-" fix usse of :h SnipMate-deprecate
-set g:snipMate.snippet_version
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -256,7 +254,7 @@ set backspace=indent,eol,start
 "Maximize search history
 set history=10000
 "Set difftool view default is vertical (https://github.com/tpope/vim-fugitive/issues/508)
-"set diffopt+=vertical
+set diffopt+=vertical
 "Easier to prettify JSON. Usages: :FormatJSON
 com! FormatJSON %!python -m json.tool
 
