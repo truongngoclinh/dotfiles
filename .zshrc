@@ -1,10 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 ANT_HOME=/Users/linh.truong/Downloads/apache-ant-1.9.7
 
-export GH_INSTALL_USER='linhtruong-rakuten'
-#export GH_INSTALL_TOKEN='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'
-#export GH_INSTALL_TOKEN='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'
-export GH_INSTALL_TOKEN='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'
 export REQUESTS_CA_BUNDLE="/Library/Application Support/Netskope/STAgent/download/nscacert.pem"
 
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
